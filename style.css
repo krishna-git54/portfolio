@@ -96,6 +96,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -103,6 +104,7 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background: var(--bg-gradient);
+  overflow-x: hidden;
   transition: background-color 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
@@ -445,6 +447,8 @@ h1 {
   z-index: 1;
   margin: 0 0 12px;
   color: #d1fae5;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   opacity: 0;
   transform: translateY(12px);
   animation: reveal 0.7s forwards;
@@ -1025,6 +1029,10 @@ section {
 }
 
 @media (max-width: 680px) {
+  .page-shell {
+    width: min(var(--container), calc(100% - 24px));
+  }
+
   .nav-row {
     min-height: auto;
     padding: 16px 0;
@@ -1039,7 +1047,17 @@ section {
   }
 
   .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
     gap: 12px;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .theme-toggle {
@@ -1047,11 +1065,27 @@ section {
   }
 
   h1 {
+    margin-top: 18px;
     max-width: none;
+    font-size: clamp(2.2rem, 11vw, 3.3rem);
+    line-height: 1.08;
   }
 
   .hero {
-    padding-top: 24px;
+    padding-top: 20px;
+  }
+
+  .hero-copy,
+  .hero-panel,
+  .section-card,
+  .stack-card,
+  .highlight-card,
+  .timeline-card,
+  .contact-card,
+  .industry-card,
+  .logo-card,
+  .infrastructure-banner {
+    padding: 20px;
   }
 
   .hero-copy,
@@ -1062,5 +1096,135 @@ section {
   .timeline-card,
   .contact-card {
     border-radius: 22px;
+  }
+
+  .hero-name {
+    margin-top: 18px;
+    font-size: 1.15rem;
+  }
+
+  .hero-lead,
+  .section-heading p,
+  .panel-note p,
+  .industry-points p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions,
+  .hero-tags,
+  .stack-list,
+  .timeline-list {
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .metric {
+    padding: 16px;
+  }
+
+  .metric strong {
+    font-size: 1.2rem;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .terminal {
+    min-height: auto;
+    padding: 18px;
+    font-size: 0.9rem;
+  }
+
+  .ops-visual,
+  .panel-note {
+    padding: 18px;
+  }
+
+  .ops-cloud {
+    min-height: 140px;
+  }
+
+  .ops-node {
+    min-width: 64px;
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.78rem;
+  }
+
+  .ops-node:nth-child(1) {
+    left: 12px;
+  }
+
+  .ops-node:nth-child(2) {
+    right: 12px;
+  }
+
+  .ops-node:nth-child(3) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .focus-points {
+    gap: 12px;
+  }
+
+  .logo-card {
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+  }
+
+  .logo-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .banner-copy h3,
+  .industry-copy-card h3 {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-shell {
+    width: min(var(--container), calc(100% - 20px));
+  }
+
+  .hero-copy,
+  .hero-panel,
+  .section-card,
+  .stack-card,
+  .highlight-card,
+  .timeline-card,
+  .contact-card,
+  .industry-card,
+  .logo-card,
+  .infrastructure-banner {
+    padding: 16px;
+  }
+
+  .eyebrow,
+  .hero-tags span,
+  .stack-list span,
+  .timeline-list span {
+    font-size: 0.82rem;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding: 0 18px;
+  }
+
+  .terminal {
+    font-size: 0.82rem;
   }
 }
