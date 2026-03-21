@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Linux badge</title>
+  <desc id="desc">Penguin inspired Linux badge</desc>
+  <rect width="160" height="160" rx="36" fill="#f7f8fb"/>
+  <ellipse cx="80" cy="78" rx="34" ry="44" fill="#111827"/>
+  <ellipse cx="80" cy="86" rx="22" ry="28" fill="#ffffff"/>
+  <ellipse cx="68" cy="69" rx="5" ry="7" fill="#ffffff"/>
+  <ellipse cx="92" cy="69" rx="5" ry="7" fill="#ffffff"/>
+  <circle cx="68" cy="71" r="2.5" fill="#111827"/>
+  <circle cx="92" cy="71" r="2.5" fill="#111827"/>
+  <path d="M80 78l-10 6h20z" fill="#f59e0b"/>
+  <ellipse cx="64" cy="118" rx="14" ry="9" fill="#f59e0b"/>
+  <ellipse cx="96" cy="118" rx="14" ry="9" fill="#f59e0b"/>
+  <text x="80" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">LINUX</text>
+</svg>

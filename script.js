@@ -2,6 +2,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const profilePhoto = document.querySelector(".profile-photo");
 const profileInitials = document.querySelector(".profile-initials");
+const profileFrame = document.querySelector(".profile-frame");
 const themeToggle = document.getElementById("theme-toggle");
 const themeToggleLabel = themeToggle?.querySelector(".theme-toggle-label");
 const themeStorageKey = "portfolio-theme";
@@ -30,11 +31,37 @@ if (themeToggle) {
   });
 }
 
+function showProfilePhoto() {
+  if (!profilePhoto) {
+    return;
+  }
+
+  profilePhoto.classList.add("is-loaded");
+  profileFrame?.classList.add("has-image");
+  if (profileInitials) {
+    profileInitials.setAttribute("aria-hidden", "true");
+  }
+}
+
+function showProfileFallback() {
+  if (!profilePhoto) {
+    return;
+  }
+
+  profilePhoto.classList.remove("is-loaded");
+  profileFrame?.classList.remove("has-image");
+  if (profileInitials) {
+    profileInitials.removeAttribute("aria-hidden");
+  }
+}
+
 if (profilePhoto) {
-  profilePhoto.addEventListener("load", function () {
-    profilePhoto.style.display = "block";
-    if (profileInitials) {
-      profileInitials.style.display = "none";
-    }
-  });
+  if (profilePhoto.complete && profilePhoto.naturalWidth > 0) {
+    showProfilePhoto();
+  } else {
+    showProfileFallback();
+  }
+
+  profilePhoto.addEventListener("load", showProfilePhoto);
+  profilePhoto.addEventListener("error", showProfileFallback);
 }

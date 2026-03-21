@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Docker badge</title>
+  <desc id="desc">Rounded square Docker badge</desc>
+  <rect width="160" height="160" rx="36" fill="#eef7ff"/>
+  <g fill="#2496ed">
+    <rect x="38" y="73" width="16" height="16" rx="3"/>
+    <rect x="57" y="73" width="16" height="16" rx="3"/>
+    <rect x="76" y="73" width="16" height="16" rx="3"/>
+    <rect x="95" y="73" width="16" height="16" rx="3"/>
+    <rect x="57" y="54" width="16" height="16" rx="3"/>
+    <rect x="76" y="54" width="16" height="16" rx="3"/>
+    <rect x="95" y="54" width="16" height="16" rx="3"/>
+    <path d="M31 91h84c-3 16-15 28-31 28H58c-17 0-28-11-27-28z"/>
+    <path d="M118 74c6-1 12 2 15 8-4 4-10 6-15 5z"/>
+  </g>
+  <text x="80" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">DOCKER</text>
+</svg>

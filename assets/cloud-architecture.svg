@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud architecture illustration</title>
+  <desc id="desc">Stylized infrastructure diagram for portfolio</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="36" fill="url(#bg)"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="4">
+    <path d="M116 121h122"/>
+    <path d="M286 121h148"/>
+    <path d="M477 121h122"/>
+    <path d="M360 168v72"/>
+    <path d="M228 260h264"/>
+  </g>
+  <rect x="58" y="78" width="122" height="84" rx="20" fill="url(#card)" stroke="#cbd5e1"/>
+  <rect x="218" y="78" width="122" height="84" rx="20" fill="url(#card)" stroke="#cbd5e1"/>
+  <rect x="380" y="78" width="122" height="84" rx="20" fill="url(#card)" stroke="#cbd5e1"/>
+  <rect x="540" y="78" width="122" height="84" rx="20" fill="url(#card)" stroke="#cbd5e1"/>
+  <rect x="252" y="240" width="216" height="104" rx="24" fill="#0f172a"/>
+  <rect x="277" y="268" width="48" height="48" rx="12" fill="#2496ed"/>
+  <rect x="336" y="268" width="48" height="48" rx="12" fill="#326ce5"/>
+  <rect x="395" y="268" width="48" height="48" rx="12" fill="#f59e0b"/>
+  <text x="119" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Source</text>
+  <text x="119" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#475569">Code</text>
+  <text x="279" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Jenkins</text>
+  <text x="279" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#475569">Pipeline</text>
+  <text x="441" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Docker</text>
+  <text x="441" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#475569">Images</text>
+  <text x="601" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">AWS</text>
+  <text x="601" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#475569">Cloud</text>
+  <text x="360" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Kubernetes Delivery Layer</text>
+  <text x="360" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e1">Container orchestration, scaling, and service operations</text>
+</svg>

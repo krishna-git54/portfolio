@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Kubernetes badge</title>
+  <desc id="desc">Hexagon badge for Kubernetes</desc>
+  <rect width="160" height="160" rx="36" fill="#eff4ff"/>
+  <g transform="translate(80 75)">
+    <polygon points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="#326ce5"/>
+    <circle r="22" fill="#ffffff"/>
+    <circle r="7" fill="#326ce5"/>
+    <g stroke="#326ce5" stroke-width="5" stroke-linecap="round">
+      <path d="M0-34v18"/>
+      <path d="M29-17-15 8"/>
+      <path d="M29 17-15-8"/>
+      <path d="M0 34V16"/>
+      <path d="M-29 17 15-8"/>
+      <path d="M-29-17 15 8"/>
+    </g>
+  </g>
+  <text x="80" y="141" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#326ce5">KUBERNETES</text>
+</svg>
