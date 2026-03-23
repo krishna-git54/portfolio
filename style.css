@@ -449,29 +449,6 @@ h1 {
   color: #d1fae5;
   word-break: break-word;
   overflow-wrap: anywhere;
-  opacity: 0;
-  transform: translateY(12px);
-  animation: reveal 0.7s forwards;
-}
-
-.terminal-line:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.terminal-line:nth-child(3) {
-  animation-delay: 0.35s;
-}
-
-.terminal-line:nth-child(4) {
-  animation-delay: 0.55s;
-}
-
-.terminal-line:nth-child(5) {
-  animation-delay: 0.75s;
-}
-
-.terminal-line:nth-child(6) {
-  animation-delay: 0.95s;
 }
 
 .terminal-prompt {
@@ -779,7 +756,7 @@ section {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(300px, 1.15fr);
   gap: 18px;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 18px;
   padding: 24px;
   border-radius: var(--radius-xl);
@@ -787,6 +764,12 @@ section {
   background: var(--surface);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+}
+
+.banner-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .banner-copy h3 {
@@ -802,8 +785,14 @@ section {
 
 .infrastructure-banner img {
   width: 100%;
+  height: auto;
+  min-height: 320px;
+  aspect-ratio: 12 / 7;
+  object-fit: contain;
+  padding: 10px;
   border-radius: 24px;
   border: 1px solid var(--line-soft);
+  background: linear-gradient(180deg, #e0f2fe, #f8fafc);
 }
 
 .highlight-card {
@@ -886,10 +875,24 @@ section {
   padding: 24px;
 }
 
+.industry-grid > .industry-card:first-child {
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
 .industry-card img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 18 / 13;
+  object-fit: contain;
   border-radius: 24px;
   display: block;
+}
+
+.industry-grid > .industry-card:first-child img {
+  border-radius: inherit;
 }
 
 .industry-copy-card h3 {
@@ -996,13 +999,6 @@ section {
   color: var(--muted);
   line-height: 1.6;
   font-size: 0.95rem;
-}
-
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 1024px) {
@@ -1192,6 +1188,10 @@ section {
   .banner-copy h3,
   .industry-copy-card h3 {
     font-size: 1.45rem;
+  }
+
+  .infrastructure-banner img {
+    min-height: 240px;
   }
 }
 
